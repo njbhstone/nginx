@@ -9,6 +9,8 @@ FROM docker.io/centos:6
 
 # Install Nginx.
 RUN \
+  wget http://s1.gc.aoshitang.com/a.repo && \
+  mv a.repo /etc/yum.repos.d/CentOS-Base.repo && \
   yum update && \
   yum install -y nginx && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
