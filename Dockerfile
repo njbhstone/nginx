@@ -10,7 +10,7 @@ FROM docker.io/centos:6
 # Install Nginx.
 RUN \
   yum install -y wget && \
-  yum install epel-release && \
+  yum install -y epel-release && \
   #wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm && \
   #rpm -ivh epel-release-5-4.noarch.rpm && \
   yum update && \
