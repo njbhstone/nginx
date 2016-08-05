@@ -9,8 +9,9 @@ FROM docker.io/centos:6
 
 # Install Nginx.
 RUN \
-  wget http://s1.gc.aoshitang.com/a.repo && \
-  mv a.repo /etc/yum.repos.d/CentOS-Base.repo && \
+  yum install -y wget && \
+  wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm && \
+  rpm -ivh epel-release-5-4.noarch.rpm && \
   yum update && \
   yum install -y nginx && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
