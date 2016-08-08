@@ -15,7 +15,7 @@ RUN \
   #rpm -ivh epel-release-5-4.noarch.rpm && \
   yum update && \
   yum install -y nginx && \
-  echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+  echo "\ndaemon off;" >> /etc/nginx/nginx.conf
   #chown -R www-data:www-data /var/lib/nginx
 
 # Define mountable directories.
